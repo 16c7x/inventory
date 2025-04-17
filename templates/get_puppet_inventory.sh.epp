@@ -1,3 +1,7 @@
+<%
+# EPP parameters
+# String $output_dir: the directory where the JSON file will be saved
+-%>
 #!/bin/bash
 
 # Get current timestamp
@@ -6,8 +10,8 @@ timestamp=$(date +"%Y%m%d_%H%M%S")
 # Get Puppet server hostname
 puppet_server=$(puppet config print server)
 
-# Define output file
-output_file="puppet_inventory_${timestamp}.json"
+# Define output file with user-defined directory
+output_file="<%= $output_dir %>/puppet_inventory_${timestamp}.json"
 
 # Run the curl command and save output to file
 curl --cacert /etc/puppetlabs/puppet/ssl/certs/ca.pem \
