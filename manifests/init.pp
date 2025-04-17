@@ -2,9 +2,7 @@
 #
 # A description of what this class does
 #
-# @example
-#   include inverntory::inventory
-class inverntory::inventory {
+class inventory {
   $file_path = '/usr/local/bin/get_puppet_inventory.sh'
   $output_dir = '/var/tmp'
 
