@@ -11,6 +11,6 @@ class inventory {
     mode    => '0755',
     owner   => 'root',
     group   => 'root',
-    content => epp('inventory/get_puppet_inventory.epp', { 'output_dir' => $output_dir }),
+    content => epp('inventory/get_puppet_inventory.sh.epp', { 'output_dir' => $output_dir }),
   }
 }
